@@ -1,0 +1,36 @@
+{
+  "Houses": [
+    {
+      "Id": "lotusInn1",
+      "Order": 1,
+      "Name": "Lotus Inn 1",
+      "Address": "No.47 Nguyen Dinh Thi, Tay Ho, Hanoi, Viet Nam",
+      "Latitude": 21.04297553044816,
+      "Longitude": 105.82552302628756,
+      "Article": {
+        "Id": "lotusInn1",
+        "Name": "Lotus Inn 1",
+        "Title": "Lotus Inn 1",
+        "Description": "",
+        "Content": ""
+      },
+      "Thumbnail": ""
+    },
+    {
+      "Id": "lotusInn2",
+      "Order": 2,
+      "Name": "Lotus Inn 2",
+      "Address": "169 Phố Vệ Hồ, Hồ Tây, Hà Nôi, Việt Nam",
+      "Latitude": 21.0674251090047,
+      "Longitude": 105.81171997348,
+      "Article": {
+        "Id": "lotusInn2",
+        "Name": "Lotus Inn 2",
+        "Title": "Lotus Inn 2",
+        "Description": "",
+        "Content": ""
+      },
+      "Thumbnail": ""
+    }
+  ]
+}

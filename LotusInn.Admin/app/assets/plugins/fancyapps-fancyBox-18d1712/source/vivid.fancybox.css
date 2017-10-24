@@ -1,0 +1,21 @@
+﻿.fancybox-overlay {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.fancybox-opened .fancybox-skin {
+    /*-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;*/
+}
+
+.fancybox-skin {
+    border: none; /*1px solid #E61C29;*/
+    padding: 0 !important;
+    -webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+
+.fancybox-title {
+    text-align: center;
+}

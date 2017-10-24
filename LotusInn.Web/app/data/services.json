@@ -1,0 +1,83 @@
+{
+  "Facilities": [
+    {
+      "Id": "f1",
+      "Name": "Cable TV",
+      "Description": "",
+      "Icon": "cable-tv"
+    },
+    {
+      "Id": "f2",
+      "Name": "High speed cable internet and wifi",
+      "Description": "",
+      "Icon": "wifi"
+    },
+    {
+      "Id": "f3",
+      "Name": "Air Conditioning",
+      "Description": "",
+      "Icon": "air-conditioning"
+    },
+    {
+      "Id": "f4",
+      "Name": "Refrigerator",
+      "Description": "",
+      "Icon": "fridge"
+    },
+    {
+      "Id": "f5",
+      "Name": "Kitchenette",
+      "Description": "",
+      "Icon": "kitchenette"
+    },
+    {
+      "Id": "f6",
+      "Name": "Fan",
+      "Description": "",
+      "Icon": "Fan"
+    },
+    {
+      "Id": "f7",
+      "Name": "Wardrobe",
+      "Description": "",
+      "Icon": "Wardrobe"
+    },
+    {
+      "Id": "f8",
+      "Name": "Bed and completed mattress set",
+      "Description": "",
+      "Icon": "bed"
+    },
+    {
+      "Id": "f9",
+      "Name": "Working desk",
+      "Description": "",
+      "Icon": "desk"
+    },
+    {
+      "Id": "f10",
+      "Name": "Elevator",
+      "Description": "",
+      "Icon": "elevator"
+    },
+    {
+      "Id": "f11",
+      "Name": "Washing machine",
+      "Description": "",
+      "Icon": "washing-machine"
+    },
+    {
+      "Id": "f12",
+      "Name": "Dryer",
+      "Description": "",
+      "Icon": "Dryer"
+    }
+  ],
+  "Article": {
+    "Id": "services",
+    "Name": "Services",
+    "Title": "",
+    "Description": "",
+    "Content": "<p>Thank you for choosing our house to live in Hanoi. It is our pleasure to have you as our guests and we hope you will have &nbsp;a pleasant stay with us.</p>\n\n<p><strong>Our Services include in room rates:</strong></p>\n\n<ul>\n\t<li>24 Hours Reception</li>\n\t<li>24/7 Security</li>\n\t<li>House keeping: 3 times per week</li>\n\t<li>Motobike Parking</li>\n</ul>\n\n<p><strong>Extra Services: </strong></p>\n\n<p style=\"margin-left:.5in\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wash and Iron Service: <strong>$30/ month</strong> (every working day except Sat, Sun)</p>\n\n<p style=\"margin-left:.5in\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extra house keeping service, not including weekend: <strong>$30/ month.</strong></p>\n\n<p style=\"margin-left:.5in\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drinking water, towels and other toiletries for sale.</p>\n\n<p style=\"margin-left:.5in\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bar and mini restaurant</p>\n\n<p style=\"margin-left:.5in\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Motobikes for rent.</p>\n\n<p style=\"margin-left:.5in\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Car for rent with driver.</p>\n\n<p style=\"margin-left:.5in\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TAXI from NoiBai Airport &nbsp;to our houses: <strong>4 SEATS - $18; 7 SEATS - $20</strong></p>\n\n<p style=\"margin-left:.5in\">· &nbsp; &nbsp; &nbsp; &nbsp; TAXI from our houses to NoiBai Airport: <strong>4 SEATS - $15; 7 SEATS - $18</strong></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n"
+  }
+}

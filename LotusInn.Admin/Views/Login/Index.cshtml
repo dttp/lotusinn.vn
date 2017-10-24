@@ -1,0 +1,125 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>LotusInn Admin - Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+
+    <link href="~/app/assets/plugins/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/app/assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="~/app/assets/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link href="~/app/assets/css/login3.css" rel="stylesheet" />
+    <!-- BEGIN THEME STYLES -->
+    <link href="~/app/assets/css/components.css" rel="stylesheet" />
+    <link href="~/app/assets/css/plugins.css" rel="stylesheet" />
+    <link href="~/app/assets/css/layout.css" rel="stylesheet" />
+    <link href="~/app/assets/css/themes/blue.css" rel="stylesheet" />
+    <link href="~/app/assets/css/custom.css" rel="stylesheet" />
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END THEME STYLES -->
+    <style>
+        .login .content .form-actions {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="login" ng-app="lotusinn.admin.login" ng-controller="loginCtrl">
+    <!-- BEGIN LOGO -->
+    <div class="logo">
+        <a href="/">
+            <img src="~/app/assets/images/logo.png" alt="logo" style="height: 80px;" />
+            <span class="logo1">LOTUS</span> <span class="logo2">INN</span>
+        </a>
+    </div>
+    <!-- END LOGO -->
+    <!-- BEGIN LOGIN -->
+    <div class="content">
+        <!-- BEGIN LOGIN FORM -->
+        <form class="login-form" name="loginForm" novalidate="">
+            <h3 class="form-title">Login to your account</h3>
+            <div class="alert alert-danger" ng-class="{'display-hide': error.message.length == 0}">
+                <span>
+                    {{error.message}}
+                </span>
+            </div>
+            <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" ng-model="loginInfo.userName" ng-enter="login(loginForm)" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <div class="input-icon">
+                    <i class="fa fa-lock"></i>
+                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" ng-enter="login(loginForm)" ng-model="loginInfo.password" required />
+                </div>
+            </div>
+            <div class="form-actions">
+                @*<label class="checkbox">
+                        <input type="checkbox" icheck ng-model="loginInfo.remember" skin="minimal-blue" name="remember" value="1" /> Remember me
+                    </label>*@
+                <button type="button" class="btn green-haze pull-right" ng-click="login(loginForm)">
+                    Login <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+            </div>            
+        </form>
+        <!-- END LOGIN FORM -->
+    </div>
+    <!-- END LOGIN -->
+    <!-- BEGIN COPYRIGHT -->
+    <div class="copyright">
+        2016 - LotusInn Management &copy; GVCompany.com.
+    </div>
+    <!-- END COPYRIGHT -->
+    <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- BEGIN CORE PLUGINS -->
+
+    <script src="~/app/assets/js/jquery-2.1.4.min.js"></script>
+    <script src="~/app/assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="~/app/assets/angularjs/angular.min.js"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+
+    <script src="~/app/assets/plugins/angular-cookie/angular-cookie.min.js"></script>
+    <script src="~/app/directives/ngEnter.js"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="~/app/assets/js/metronic.js"></script>
+    <script src="~/app/assets/js/layout.js"></script>
+    <script src="~/app/components/Login/login.js"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <script>
+jQuery(document).ready(function() {
+  Metronic.init(); // init metronic core components
+  Layout.init(); // init current layout
+});
+    </script>
+    <!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

@@ -1,0 +1,16 @@
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF OBJECT_ID('ArticleGetByName', 'P') IS NOT NULL
+	DROP PROC ArticleGetByName
+GO
+
+CREATE PROCEDURE ArticleGetByName
+	@name nvarchar(100)
+AS
+BEGIN
+	SELECT * FROM Article WHERE [Name] = @name
+END
+GO

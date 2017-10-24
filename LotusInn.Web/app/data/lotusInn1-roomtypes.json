@@ -1,0 +1,256 @@
+{
+  "RoomTypes": [
+    {
+      "Id": "type1",
+      "HouseId": "lotusInn1",
+      "Name": "Type 1",
+      "Price": 460.0,
+      "Features": [
+        "Square: 35m2",
+        "View: Through Air Van"
+      ],
+      "Article": {
+        "Id": "type1",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Ceiling Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p>&nbsp;</p>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>12 Hours Reception</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "cFWrFim1FEagMpPDsteGaA",
+          "imagePath": "/app/data/images/lotusInn1/type1/type 1.3.jpg",
+          "name": "type 1.3.jpg",
+          "description": ""
+        },
+        {
+          "id": "j7IwvJxuxUiZ0brVd-cRZQ",
+          "imagePath": "/app/data/images/lotusInn1/type1/type 1.5.jpg",
+          "name": "type 1.5.jpg",
+          "description": ""
+        },
+        {
+          "id": "yUi2gHVNEkGo0ik2ttz_0w",
+          "imagePath": "/app/data/images/lotusInn1/type1/tang 2  p3 -10000.jpg",
+          "name": "tang 2  p3 -10000.jpg",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "type2",
+      "HouseId": "lotusInn1",
+      "Name": "Type 2",
+      "Price": 500.0,
+      "Features": [
+        "Square: 38m2",
+        "View: Through Air Van"
+      ],
+      "Article": {
+        "Id": "type2",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Ceiling Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>12 Hours Reception</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "3LqjNWKbwEmj266pzGIWAw",
+          "imagePath": "/app/data/images/lotusInn1/type2/1.jpg",
+          "name": "1.jpg",
+          "description": ""
+        },
+        {
+          "id": "eOHiRGHDJkWSN_8t9sXacQ",
+          "imagePath": "/app/data/images/lotusInn1/type2/2.jpg",
+          "name": "2.jpg",
+          "description": ""
+        },
+        {
+          "id": "8VcbxIfqdUKqkMAxvoFg-Q",
+          "imagePath": "/app/data/images/lotusInn1/type2/3.jpg",
+          "name": "3.jpg",
+          "description": ""
+        },
+        {
+          "id": "3RdpSVL-p0GgOP5lqMe6Aw",
+          "imagePath": "/app/data/images/lotusInn1/type2/4.jpg",
+          "name": "4.jpg",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "RCqFVrYb40ul_q-mYxECEQ",
+      "HouseId": "lotusInn1",
+      "Name": "Type 3",
+      "Price": 520.0,
+      "Features": [
+        "Square: 33-35m2",
+        "View: Through Window"
+      ],
+      "Article": {
+        "Id": "0mupT13hgUepjc_rEeNd6g",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Ceiling Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>12 Hours Reception</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "ucx3tE5ZwEG06blTmboOaQ",
+          "imagePath": "/app/data/images/lotusInn1/RCqFVrYb40ul_q-mYxECEQ/1.jpg",
+          "name": "1.jpg",
+          "description": ""
+        },
+        {
+          "id": "Ozi4BrMG6ket2R76sldECA",
+          "imagePath": "/app/data/images/lotusInn1/RCqFVrYb40ul_q-mYxECEQ/2.jpg",
+          "name": "2.jpg",
+          "description": ""
+        },
+        {
+          "id": "gZuZhtdW5UuUEaoNNpUrjw",
+          "imagePath": "/app/data/images/lotusInn1/RCqFVrYb40ul_q-mYxECEQ/3.jpg",
+          "name": "3.jpg",
+          "description": ""
+        },
+        {
+          "id": "b2iaaO4K-0Ol-_UEC4nobQ",
+          "imagePath": "/app/data/images/lotusInn1/RCqFVrYb40ul_q-mYxECEQ/4.jpg",
+          "name": "4.jpg",
+          "description": ""
+        },
+        {
+          "id": "XqftEmUjbk2YmdMFTQjG-Q",
+          "imagePath": "/app/data/images/lotusInn1/RCqFVrYb40ul_q-mYxECEQ/5.jpg",
+          "name": "5.jpg",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "7SKBN9zMFkCuYdUtyMbTVQ",
+      "HouseId": "lotusInn1",
+      "Name": "Type 4",
+      "Price": 550.0,
+      "Features": [
+        "Square: 33-35m2",
+        "View: Through very big Window"
+      ],
+      "Article": {
+        "Id": "MUoHawoPCEmoeVqMVtLsZQ",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Ceiling Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>12 Hours Reception</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "LOylkobY7Em8FttTOnbw0w",
+          "imagePath": "/app/data/images/lotusInn1/7SKBN9zMFkCuYdUtyMbTVQ/1.jpg",
+          "name": "1.jpg",
+          "description": ""
+        },
+        {
+          "id": "ni7FR1QpNEufpnbpKx4eMA",
+          "imagePath": "/app/data/images/lotusInn1/7SKBN9zMFkCuYdUtyMbTVQ/2.jpg",
+          "name": "2.jpg",
+          "description": ""
+        },
+        {
+          "id": "_Xsq8nhjj0aeIo0_D-W1mA",
+          "imagePath": "/app/data/images/lotusInn1/7SKBN9zMFkCuYdUtyMbTVQ/3.jpg",
+          "name": "3.jpg",
+          "description": ""
+        },
+        {
+          "id": "rGL1Xu1pD0COIbbEamnMuA",
+          "imagePath": "/app/data/images/lotusInn1/7SKBN9zMFkCuYdUtyMbTVQ/4.jpg",
+          "name": "4.jpg",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "g7dSeUtNZEWGx5Fx3u8S-g",
+      "HouseId": "lotusInn1",
+      "Name": "Type 5",
+      "Price": 580.0,
+      "Features": [
+        "Square: 35m2",
+        "View: Through very big Window"
+      ],
+      "Article": {
+        "Id": "Y5xMs22Pe0GNTsWyeQI2cQ",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Ceiling Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>12 Hours Reception</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "ooLsy1JfnEKz2EwGXySMwA",
+          "imagePath": "/app/data/images/lotusInn1/g7dSeUtNZEWGx5Fx3u8S-g/1.jpg",
+          "name": "1.jpg",
+          "description": ""
+        },
+        {
+          "id": "IiwcEZbxTEm4CYj9BzI_fg",
+          "imagePath": "/app/data/images/lotusInn1/g7dSeUtNZEWGx5Fx3u8S-g/2.jpg",
+          "name": "2.jpg",
+          "description": ""
+        },
+        {
+          "id": "HKMKa_I8FkqD_ccCBSa_Kw",
+          "imagePath": "/app/data/images/lotusInn1/g7dSeUtNZEWGx5Fx3u8S-g/3.jpg",
+          "name": "3.jpg",
+          "description": ""
+        },
+        {
+          "id": "Sfka7GsTwU2IpC4L7mBm1g",
+          "imagePath": "/app/data/images/lotusInn1/g7dSeUtNZEWGx5Fx3u8S-g/4.jpg",
+          "name": "4.jpg",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "jcASoN4sMEegL76LWtSq_Q",
+      "HouseId": "lotusInn1",
+      "Name": "Type 6",
+      "Price": 750.0,
+      "Features": [
+        "Square: 45m2",
+        "View: Through 2 big Windows\tDelete"
+      ],
+      "Article": {
+        "Id": "yLXM7cFikk2RVvt1rm7e6g",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Ceiling Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>12 Hours Reception</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "JldLo7dSj0CGxhFJbsZvBw",
+          "imagePath": "/app/data/images/lotusInn1/jcASoN4sMEegL76LWtSq_Q/type 6.1.jpg",
+          "name": "type 6.1.jpg",
+          "description": ""
+        },
+        {
+          "id": "9q0vP12Ep0q3m9sSnBQDMg",
+          "imagePath": "/app/data/images/lotusInn1/jcASoN4sMEegL76LWtSq_Q/type 6.jpg",
+          "name": "type 6.jpg",
+          "description": ""
+        },
+        {
+          "id": "gvEM7kl2B0yqE3JTejxC3w",
+          "imagePath": "/app/data/images/lotusInn1/jcASoN4sMEegL76LWtSq_Q/type 6.2.jpg",
+          "name": "type 6.2.jpg",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

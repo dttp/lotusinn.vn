@@ -1,0 +1,133 @@
+{
+  "RoomTypes": [
+    {
+      "Id": "ocmJ1XZoC0OMasGpPwTG-w",
+      "HouseId": "lotusInn2",
+      "Name": "Type 1",
+      "Price": 500.0,
+      "Features": [
+        "Square: 40m2",
+        "View: Open Window to West Lake"
+      ],
+      "Article": {
+        "Id": "zhxK_cyJ9U27bqUN55ppaw",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>24/7 Supporting Service</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "9uJAgm3_OUiPMP5GIm3ndw",
+          "imagePath": "/app/data/images/lotusInn2/ocmJ1XZoC0OMasGpPwTG-w/VeHo-VeHo_Type3_1.JPG",
+          "name": "VeHo-VeHo_Type3_1.JPG",
+          "description": ""
+        },
+        {
+          "id": "0_X03HsO-0icF6dLhCExjA",
+          "imagePath": "/app/data/images/lotusInn2/ocmJ1XZoC0OMasGpPwTG-w/VeHo-VeHo_Type3_2.JPG",
+          "name": "VeHo-VeHo_Type3_2.JPG",
+          "description": ""
+        },
+        {
+          "id": "7WFKxtrDak2SygoBi1zY4Q",
+          "imagePath": "/app/data/images/lotusInn2/ocmJ1XZoC0OMasGpPwTG-w/VeHo-VeHo_Type3_3.JPG",
+          "name": "VeHo-VeHo_Type3_3.JPG",
+          "description": ""
+        },
+        {
+          "id": "DSF8TefMiUmmz0QB759q1w",
+          "imagePath": "/app/data/images/lotusInn2/ocmJ1XZoC0OMasGpPwTG-w/VeHo-VeHo_Type3_4.JPG",
+          "name": "VeHo-VeHo_Type3_4.JPG",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "6d88b5cPskiYliIwq5vPTw",
+      "HouseId": "lotusInn2",
+      "Name": "Type 2",
+      "Price": 520.0,
+      "Features": [
+        "Square: 36m2",
+        "View: Font West Lake"
+      ],
+      "Article": {
+        "Id": "wpogfPAwCk605aYjOwC1MQ",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>24/7 Supporting Service</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "KTqGuwX4AEq6H2EVkgC2mQ",
+          "imagePath": "/app/data/images/lotusInn2/6d88b5cPskiYliIwq5vPTw/VeHo-VeHo_Type2_1.JPG",
+          "name": "VeHo-VeHo_Type2_1.JPG",
+          "description": ""
+        },
+        {
+          "id": "L5cvujjQrEenSPISIrW0Yg",
+          "imagePath": "/app/data/images/lotusInn2/6d88b5cPskiYliIwq5vPTw/VeHo-VeHo_Type2_2.JPG",
+          "name": "VeHo-VeHo_Type2_2.JPG",
+          "description": ""
+        },
+        {
+          "id": "CFHjJfCpwUG4R6iHgOcffg",
+          "imagePath": "/app/data/images/lotusInn2/6d88b5cPskiYliIwq5vPTw/VeHo-VeHo_Type2_3.JPG",
+          "name": "VeHo-VeHo_Type2_3.JPG",
+          "description": ""
+        },
+        {
+          "id": "O0gYhQu8WkiwnDHoF4aBmQ",
+          "imagePath": "/app/data/images/lotusInn2/6d88b5cPskiYliIwq5vPTw/VeHo-VeHo_Type2_4.JPG",
+          "name": "VeHo-VeHo_Type2_4.JPG",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "dIgZK4ZjhEmsv8FrUvHq0g",
+      "HouseId": "lotusInn2",
+      "Name": "Type 3",
+      "Price": 550.0,
+      "Features": [
+        "Square: 36m2",
+        "View: Font West Lake"
+      ],
+      "Article": {
+        "Id": "6Z_YiVfTCUu8NhFS8YtwKA",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": "<p><strong>FACILITIES INCLUDED</strong></p>\n\n<ul>\n\t<li>Air Conditioning</li>\n\t<li>Fan</li>\n\t<li>Wardrobe</li>\n\t<li>TV</li>\n\t<li>Cable TV</li>\n\t<li>Refrigerator</li>\n\t<li>Studying table</li>\n\t<li>Dinning table</li>\n\t<li>2 chairs</li>\n\t<li>Kitchenette &amp; Glassware</li>\n\t<li>Induction cooker</li>\n\t<li>Microwave</li>\n\t<li>Hot kettle</li>\n\t<li>Trash</li>\n\t<li>Bed, mattress, sheet &amp; blanket</li>\n\t<li>Public Washing Machine</li>\n\t<li>Public Dryer</li>\n</ul>\n\n<p><strong>SERVICE INCLUDED</strong></p>\n\n<ul>\n\t<li>24/7 Supporting Service</li>\n\t<li>24 Hours Security</li>\n\t<li>Motobike Parking</li>\n\t<li>Free Internet</li>\n\t<li>Free cleaning</li>\n\t<li>Free Water</li>\n\t<li>Free TV cable</li>\n</ul>\n"
+      },
+      "Images": [
+        {
+          "id": "jN8czjAfm0mGYdQEkcNuyQ",
+          "imagePath": "/app/data/images/lotusInn2/dIgZK4ZjhEmsv8FrUvHq0g/VeHo-VH_RoomType1_1.JPG",
+          "name": "VeHo-VH_RoomType1_1.JPG",
+          "description": ""
+        },
+        {
+          "id": "9FA59NFrJ0eqYNRy_LAoDA",
+          "imagePath": "/app/data/images/lotusInn2/dIgZK4ZjhEmsv8FrUvHq0g/VeHo-VH_RoomType1_2.JPG",
+          "name": "VeHo-VH_RoomType1_2.JPG",
+          "description": ""
+        },
+        {
+          "id": "2zRe6p5CukyLg4PY2U9tbg",
+          "imagePath": "/app/data/images/lotusInn2/dIgZK4ZjhEmsv8FrUvHq0g/VeHo-VH_RoomType1_3.JPG",
+          "name": "VeHo-VH_RoomType1_3.JPG",
+          "description": ""
+        },
+        {
+          "id": "fJzjTgLJyUuuoDAzOp8HNQ",
+          "imagePath": "/app/data/images/lotusInn2/dIgZK4ZjhEmsv8FrUvHq0g/VeHo-VH_RoomType1_4.JPG",
+          "name": "VeHo-VH_RoomType1_4.JPG",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

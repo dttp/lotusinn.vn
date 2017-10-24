@@ -1,0 +1,128 @@
+﻿<script src="~/app/components/House/houseAddEditCtrl.js"></script>
+
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    House Edit
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="/">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="/house">House</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a>Edit</a>            
+        </li>
+    </ul>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row" ng-controller="houseAddEditCtrl" ng-init="init()">
+    <div class="alert alert-dismissable" ng-class="{'alert-success': alert.type == 'success', 
+                                                    'alert-info': alert.type == 'info', 
+                                                    'alert-warning': alert.type == 'warning', 
+                                                    'alert-danger': alert.type=='error' }" 
+         ng-repeat="alert in alerts">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="True"></button>
+        <strong>{{alert.title}}</strong>
+        {{alert.body}}
+    </div>
+    <script type="text/ng-template" id="confirmDeleteModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Confirmation!</h3>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to delete this room type and all related info?
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">Yes</button>
+            <button class="btn default" type="button" ng-click="cancel()">No</button>
+        </div>
+    </script>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <form class="form form-horizontal" role="form" name="houseForm">
+            <div class="form-body ">
+                <div class="form-group">
+                    <label class="col-md-1 col-sm-12 col-xs-12 control-label">Name</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        <input class="form-control" type="text" ng-model="house.Name"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-1 col-sm-12 col-xs-12 control-label">Address</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        <input class="form-control" type="text" ng-model="house.Address"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-1 col-sm-12 col-xs-12 control-label">Google Map</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        <span class="form-control">Click on the map to set the location of the house in the Google Map</span>
+                        <map zoom="{{mapInfo.zoom}}" center="{{mapInfo.center}}" on-click="placeMarker()" style="height: 350px;">
+                            <marker ng-repeat="marker in mapInfo.markers" position="{{marker.position}}"></marker>
+                        </map>
+                        
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="article-content" class="col-md-1 col-sm-12 col-xs-12 control-label">Information</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                        <div id="article-content" class="form-control" ckeditor="options" ng-model="house.Article.Content"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-1 col-sm-12 col-xs-12 control-label">Room Types</label>
+                    <div class="col-md-10 col-sm-12 col-xs-12">
+                    </div>
+                </div>
+                <button type="button" class="btn blue" ng-click="createRoomType()"><i class="fa fa-plus"></i> New Room Type</button>
+                <div class="table-scrollable">
+
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th style="width: 20%">Name</th>
+                            <th style="width: 60%">Price</th>
+                            <th style="width: 20%">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-if="roomTypes.length == 0">
+                            <td colspan="3">There are no Room Types. Use [New Room Type] button to create new Room Type</td>
+                        </tr>
+                        <tr ng-repeat="room in roomTypes">
+                            <td>{{::room.Name}}</td>
+                            <td>{{::room.Price}}$</td>
+                            <td>
+                                <button type="button" class="btn yellow btn-sm" ng-click="edit(room)"><i class="fa fa-edit"></i> Edit</button>
+                                <button type="button" class="btn red btn-sm" ng-click="confirmDelete(room)"><i class="fa fa-remove"></i> Delete</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <div class="form-actions">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12">
+                        <button class="btn green" ng-click="save()"><i class="fa fa-check"></i> Save</button>
+                        <button class="btn default" ng-click="back()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END PAGE CONTENT-->

@@ -1,0 +1,115 @@
+﻿<script src="~/app/components/Service/socialServices.js"></script>
+
+<div ng-controller="socialServiceCtrl" ng-init="init()">
+    <!-- BEGIN PAGE HEADER-->
+    <h3 class="page-title">
+        Social Services
+    </h3>
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="/">Home</a>
+                <i class="fa fa-angle-right"></i>
+            </li>
+            <li>
+                <a href="">Service</a>
+            </li>
+        </ul>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="alert alert-dismissable" ng-class="{'alert-success': alert.type == 'success',
+                                                    'alert-info': alert.type == 'info',
+                                                    'alert-warning': alert.type == 'warning',
+                                                    'alert-danger': alert.type=='error' }"
+                 ng-repeat="alert in alerts">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="True"></button>
+                <strong>{{alert.title}}</strong>
+                {{alert.body}}
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn blue" ng-click="add()">Add</button>
+                </div>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr role="row" class="heading">
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Link
+                        </th>
+                        <th style="width: 200px">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-if="!services || services.length == 0">
+                        <td colspan="4" style="text-align: center"> No images.</td>
+                    </tr>
+                    <tr ng-repeat="svc in services">
+                        <td>
+                            {{svc.Name}}
+                        </td>
+                        <td>
+                            <input type="text" ng-model="svc.Link" class="form-control"/>
+                        </td>
+                        <td>
+                            <button class="btn red-haze btn-sm" ng-click="remove(svc)">
+                                <i class="fa fa-remove"></i>
+                                Remove
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3" ng-click="save()">
+                    <button class="btn blue">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/ng-template" id="addSocialModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Select social service</h3>
+        </div>
+        <div class="modal-body">
+            <!-- PRINCIPALS TABLE-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-scrollable">
+                        <table class="table table-hover table-condensed table-light">
+                            <thead>
+                                <tr>
+                                    <th width="20px"></th>
+                                    <th> Name </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="svc in serviceList">
+                                    <td>
+                                        <input type="checkbox" ng-model="svc.checked" />
+                                    </td>
+                                    <td>{{svc.Name}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn blue" type="button" ng-click="ok()">Ok</button>
+            <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+</div>
+<!-- END PAGE CONTENT-->

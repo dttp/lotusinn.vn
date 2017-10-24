@@ -1,0 +1,382 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lotus Inn - Serviced apartment</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta content="Lotus Inn - Serviced apartment" name="description">
+    <meta content="Lotus; Inn; apartment" name="keywords">
+    <meta content="LotusInn" name="author">
+
+    <meta property="og:site_name" content="Lotus Inn - Serviced apartment">
+    <meta property="og:title" content="Lotus Inn - Serviced apartment">
+    <meta property="og:description" content="Lotus Inn - Serviced apartment">
+    <meta property="og:type" content="website">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <script src="~/app/assets/js/jquery-2.1.4.min.js"></script>
+
+    <!-- Fonts START -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Pathway+Gothic+One|PT+Sans+Narrow:400+700|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700,400' rel='stylesheet' type='text/css'>
+    <!-- Fonts END -->
+    <!------------------------------ Bootstrap ------------------------------>
+    <link href="~/app/assets/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/app/assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+    <!------------------------------ Font-Awesome ------------------------------>
+    <link href="~/app/assets/plugins/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!------------------------------ Angular ------------------------------>
+    <script src="~/app/assets/angularjs/angular.min.js"></script>
+    <script src="~/app/assets/angularjs/angular-sanitize.min.js"></script>
+
+    <!------------------------------ fancybox ------------------------------>
+    <script src="~/app/assets/plugins/fancyapps-fancyBox-18d1712/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <link href="~/app/assets/plugins/fancyapps-fancyBox-18d1712/source/jquery.fancybox.css" rel="stylesheet" />
+    <link href="~/app/assets/plugins/fancyapps-fancyBox-18d1712/source/vivid.fancybox.css" rel="stylesheet" />
+    <script src="~/app/assets/plugins/fancyapps-fancyBox-18d1712/source/jquery.fancybox.js"></script>
+    <script src="~/app/assets/plugins/fancyapps-fancyBox-18d1712/fancybox.directive.js"></script>
+
+    <!------------------------------ Angular light gallery ------------------------------>
+    <link href="~/app/assets/plugins/lightgallery/css/lightgallery.min.css" rel="stylesheet" />
+    <script src="~/app/assets/plugins/lightgallery/js/lightgallery.min.js"></script>
+    <script src="~/app/assets/plugins/lightgallery/js/lg-thumbnail.min.js"></script>
+    <script src="~/app/assets/plugins/lightgallery/js/lg-fullscreen.min.js"></script>
+    <script src="~/app/assets/plugins/lightgallery/js/lg-zoom.min.js"></script>
+    <script src="~/app/assets/plugins/lightgallery/ng-lightgallery.js"></script>
+
+    <!------------------------------ flip ------------------------------>
+    <script src="~/app/assets/plugins/jquery-flip/jquery.flip.js"></script>
+    <script src="~/app/assets/plugins/jquery-flip/flipper.js"></script>
+
+    <!------------------------------ ngMap ------------------------------>
+    <script src="//maps.google.com/maps/api/js"></script>
+    <script src="~/app/assets/plugins/ngMap/ng-map.min.js"></script>
+
+    <!------------------------------ choosen ------------------------------>
+    <link href="~/app/assets/plugins/chosen/css/chosen.css" rel="stylesheet" />
+    <link href="~/app/assets/plugins/chosen/css/caddy.chosen.css" rel="stylesheet" />
+    <script src="~/app/assets/plugins/chosen/js/chosen.jquery.min.js"></script>
+    <script src="~/app/assets/plugins/chosen/chosen.js"></script>
+
+    <!------------------------------ datetime range picker ------------------------------>
+    <script src="~/app/assets/js/moment.js"></script>
+    <link href="~/app/assets/plugins/angular-daterangepicker/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" /
+    @*<link href="~/app/assets/plugins/angular-daterangepicker/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />*@>
+    <script src="~/app/assets/plugins/angular-daterangepicker/bootstrap-daterangepicker/daterangepicker.js"></script>    
+    <script src="~/app/assets/plugins/angular-daterangepicker/ng-bs-daterangepicker.min.js"></script>
+
+    <!------------------------------ Themes ------------------------------>
+    <script src="~/app/assets/js/jquery.nav.js"></script>
+    <script src="~/app/assets/js/layout.js"></script>
+    <link href="~/app/assets/css/style.css" rel="stylesheet" />
+    <link href="~/app/assets/css/style-responsive.css" rel="stylesheet" />
+    <link href="~/app/assets/css/green.css" rel="stylesheet"/>
+    <link href="~/app/assets/css/components.css" rel="stylesheet" />
+    <link href="~/app/assets/css/plugins.css" rel="stylesheet" />        
+
+    <!------------------------------ LotusInn ------------------------------>
+    <script src="~/app/app.js"></script>    
+    <link href="~/app/assets/css/custom.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function() {
+            Layout.init();
+        });
+    </script>
+</head>
+<body ng-app="lotusInnApp" ng-controller="reservationCtrl" class="menu-always-on-top" ng-init="init()">
+    <!-- Header BEGIN -->
+    <div class="header header-mobi-ext">
+        <div class="container">
+            <div class="row">
+                <!-- Logo BEGIN -->
+                <div class="col-md-3 col-sm-3">
+                    <a class="scroll site-logo" href="#home-block">
+                        <img src="~/app/assets/images/logo.png" alt="Logo">
+                        <span>Lotus Inn</span>
+                    </a>
+                </div>
+                <!-- Logo END -->
+                <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
+                <!-- Navigation BEGIN -->
+                <div class="col-md-9 pull-right">
+                    <ul class="header-navigation">
+                        <li><a href="/#home">Home</a></li>
+                        <li><a href="/#about">About Us</a></li>
+                        <li><a href="/#services">Services</a></li>
+                        <li><a href="/#gallery">Photo</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                        <li class="current"><a href="/reservation">Reservation</a></li>
+                    </ul>
+                </div>
+                <!-- Navigation END -->
+            </div>
+        </div>
+    </div>
+    <!-- Header END -->
+    <!-- Home BEGIN -->
+    <div class="home-block" id="home-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form">
+                        <form name="bookingForm" class="form-horizontal" novalidate >
+                            <div class="form-wizard">
+                                <div class="form-body">
+                                    <ul class="nav nav-pills nav-justified steps">
+                                        <li ng-repeat="step in wizardSteps" ng-class="{'active': step.number == currentStep, 'done': step.number < currentStep}">
+                                            <a href="javascript:;"  data-toggle="tab" class="step" aria-expanded="True">
+                                                <span class="number">{{step.number}}</span>
+                                                <span class="desc">
+                                                    <i class="fa fa-check" ng-if="step.number < currentStep"></i>
+                                                    {{step.desc}}
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div id="bar" class="progress progress-striped" role="progressbar">
+                                        <div class="progress-bar progress-bar-success" ng-class="getProgress()">
+                                        </div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane" id="tab1" ng-class="{'active': currentStep == 1}">
+                                            <h3 class="block">Select house &amp; and room type</h3>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">
+                                                    House
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control"  ng-model="webBooking.HouseId" chosen disable-search="true" ng-options="house.Id as house.Name for house in houses" width="100%"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">
+                                                    Room
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" ng-model="webBooking.RoomTypeId" chosen disable-search="true" ng-options="roomType.Id as getDisplayNameForRoomType(roomType) for roomType in rooms" width="100%"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">
+                                                    Date Range
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <input class="form-control" type="daterange" ng-model="datePicker.date" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-class="{'has-error':bookingForm.numPerson.$dirty && bookingForm.numPerson.$invalid}">
+                                                <label class="control-label col-md-3">
+                                                    Number of Persons
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <input name="numPerson" class="form-control" ng-model="webBooking.NumberOfPersons" required type="number" min="1" max="100"/>
+                                                    <p class="help-block" ng-show="bookingForm.numPerson.$dirty && bookingForm.numPerson.$invalid">Invalid number</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-class="{'has-error':bookingForm.numRooms.$dirty && bookingForm.numRooms.$invalid}">
+                                                <label class="control-label col-md-3">
+                                                    Number of Rooms
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <input name="numRooms" type="number" min="1" max="100" class="form-control" ng-model="webBooking.NumberOfRooms" required/>
+                                                    <p class="help-block" ng-show="bookingForm.numRooms.$dirty && bookingForm.numRooms.$invalid">Invalid number</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab2" ng-class="{'active': currentStep == 2}">
+                                            <h3 class="block">Provide your information</h3>
+
+                                            <div class="form-group" ng-class="{'has-error': bookingForm.fullname.$dirty && bookingForm.fullname.$invalid}">
+                                                <label class="control-label col-md-3">
+                                                    Full Name
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <input type="text" required name="fullname" class="form-control" ng-model="webBooking.FullName"/>
+                                                    <p class="help-block" ng-show="bookingForm.fullname.$dirty && bookingForm.fullname.$invalid">Full Name is required</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" >
+                                                <label class="control-label col-md-3">
+                                                    Gender
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <select chosen width="120px" disable-search="true" ng-model="gender" ng-options="g.value for g in genders">
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" ng-class="{'has-error': bookingForm.email.$dirty && bookingForm.email.$invalid}">
+                                                <label class="control-label col-md-3">
+                                                    Email
+                                                    <span class="required" aria-required="true">*</span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <input type="email" required name="email" class="form-control" ng-model="webBooking.Email"/>
+                                                    <p class="help-block" ng-show="bookingForm.email.$dirty && bookingForm.email.$error.required">Email is required</p>
+                                                    <p class="help-block" ng-show="bookingForm.email.$dirty && bookingForm.email.$error.email">Invalid email address</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">
+                                                    Phone                                                   
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" ng-model="webBooking.Phone"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-pane" id="tab3" ng-class="{'active': currentStep == 3}">
+                                            <h3 class="block">Check and confirm your information</h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            House
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{getHouse(webBooking.HouseId)}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Room Type
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{getRoomType(webBooking.RoomTypeId)}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Date Range
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{webBooking.From}} - {{webBooking.To}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Number of Persons
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{webBooking.NumberOfPersons}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Number of Rooms
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{webBooking.NumberOfRooms}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Full Name
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{webBooking.FullName}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Gender
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{getGender(webBooking.IsMale)}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Email
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{webBooking.Email}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-6">
+                                                            Phone
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <p class="form-control-static">{{webBooking.Phone}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <div class="tab-pane" id="tab4" ng-class="{'active': currentStep == 4}">
+                                            <div class="working" ng-if="!complete">
+                                                <span>Please wait while we are saving your reservation.</span>
+                                                <img src="~/app/assets/images/89.GIF"/>
+                                            </div>
+                                            <div class="message" ng-if="complete">Thank you for your reservation. Your booking is under process. We will email you shortly.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button ng-click="back()" class="btn default button-previous" ng-show="currentStep > 1 && currentStep < 4">
+                                                <i class="fa fa-angle-left"></i>
+                                                &nbsp;Back
+                                            </button>
+                                            <button ng-click="next()" class="btn blue button-previous" ng-disabled="isFormInvalid()" ng-show="currentStep < 4">
+                                                Continue &nbsp;
+                                                <i class="fa fa-angle-right"></i>   
+                                            </button>
+                                            <button  ng-click="finish()" class="btn green button-submit col-md-offset-3" ng-show="currentStep == 4 && complete">                                                
+                                                Back To Home
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Home BEGIN -->
+    
+    <!-- Footer block BEGIN -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- BEGIN COPYRIGHT -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="copyright">2015 © GV Limited Company. ALL Rights Reserved.</div>
+                </div>
+                <!-- END COPYRIGHT -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer block END -->
+</body>
+</html>

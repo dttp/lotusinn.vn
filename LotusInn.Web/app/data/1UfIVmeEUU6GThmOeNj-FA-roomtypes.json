@@ -1,0 +1,163 @@
+{
+  "RoomTypes": [
+    {
+      "Id": "dVNki1iGR0uUhSP_hmLUjw",
+      "HouseId": "1UfIVmeEUU6GThmOeNj-FA",
+      "Name": "Type 1",
+      "Price": 500.0,
+      "Features": [
+        "Square: 40m2",
+        "View: Open window to West Lake"
+      ],
+      "Article": {
+        "Id": "g6vUAXTi0Euv2yUMtOiBxA",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": ""
+      },
+      "Images": [
+        {
+          "id": "gUjQoqCW8EWL_3v0nehnnw",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/dVNki1iGR0uUhSP_hmLUjw/VeHo-VeHo_Type3_1.JPG",
+          "name": "VeHo-VeHo_Type3_1.JPG",
+          "description": ""
+        },
+        {
+          "id": "voTZ70oEYkSUeUVmlYPnMg",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/dVNki1iGR0uUhSP_hmLUjw/VeHo-VeHo_Type3_2.JPG",
+          "name": "VeHo-VeHo_Type3_2.JPG",
+          "description": ""
+        },
+        {
+          "id": "Yh5NmhIPzESvQIwru4CHYw",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/dVNki1iGR0uUhSP_hmLUjw/VeHo-VeHo_Type3_3.JPG",
+          "name": "VeHo-VeHo_Type3_3.JPG",
+          "description": ""
+        },
+        {
+          "id": "0OuVCldO2EuLbkyT8M-Bpg",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/dVNki1iGR0uUhSP_hmLUjw/VeHo-VeHo_Type3_4.JPG",
+          "name": "VeHo-VeHo_Type3_4.JPG",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "J19tut40GUKGXytF9WaUaQ",
+      "HouseId": "1UfIVmeEUU6GThmOeNj-FA",
+      "Name": "Type 2",
+      "Price": 520.0,
+      "Features": [
+        "Square: 36m2",
+        "View: Front to West Lake"
+      ],
+      "Article": {
+        "Id": "ZcrgEpaq10qkxXh5yrpcmw",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": ""
+      },
+      "Images": [
+        {
+          "id": "VcDzMlVQzUmtKxyUiFhumA",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_6945.jpg",
+          "name": "DSC_6945.jpg",
+          "description": ""
+        },
+        {
+          "id": "woB3M5yUvUihm__SBe5d0g",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_6952.jpg",
+          "name": "DSC_6952.jpg",
+          "description": ""
+        },
+        {
+          "id": "KMrseln_b0-JPUT6GLhjQg",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_6961.jpg",
+          "name": "DSC_6961.jpg",
+          "description": ""
+        },
+        {
+          "id": "3VwmAUvlaUGfAICdXiZ7RQ",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_6971_2.jpg",
+          "name": "DSC_6971_2.jpg",
+          "description": ""
+        },
+        {
+          "id": "ANWbs3v72ku2Kk7bwt92Dw",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_6979.jpg",
+          "name": "DSC_6979.jpg",
+          "description": ""
+        },
+        {
+          "id": "JhwCTkOv3UWjc88Nq4by7w",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_6989.jpg",
+          "name": "DSC_6989.jpg",
+          "description": ""
+        },
+        {
+          "id": "rUIuk85mx0mozUpLvsSblQ",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_6998.jpg",
+          "name": "DSC_6998.jpg",
+          "description": ""
+        },
+        {
+          "id": "mq_zrBeB_U2aMefflN1Q-g",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_7002.jpg",
+          "name": "DSC_7002.jpg",
+          "description": ""
+        },
+        {
+          "id": "RVPjPqQRekOJfYWDWdSApQ",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/J19tut40GUKGXytF9WaUaQ/DSC_7003.jpg",
+          "name": "DSC_7003.jpg",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "Id": "n7n8rCu3mE6goaSr96R9vw",
+      "HouseId": "1UfIVmeEUU6GThmOeNj-FA",
+      "Name": "Type 3",
+      "Price": 550.0,
+      "Features": [
+        "Square: 40m2",
+        "View: Front to West Lake"
+      ],
+      "Article": {
+        "Id": "IeOCsWKovkW4Mm1EWVyV2w",
+        "Name": "",
+        "Title": "",
+        "Description": "",
+        "Content": ""
+      },
+      "Images": [
+        {
+          "id": "cZcNOuvhI0mVF75Q6kacEQ",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/n7n8rCu3mE6goaSr96R9vw/VeHo-VH_RoomType1_1 (1).JPG",
+          "name": "VeHo-VH_RoomType1_1 (1).JPG",
+          "description": ""
+        },
+        {
+          "id": "qXEG_FRBUEKjHR1FUZ9BWg",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/n7n8rCu3mE6goaSr96R9vw/VeHo-VH_RoomType1_2.JPG",
+          "name": "VeHo-VH_RoomType1_2.JPG",
+          "description": ""
+        },
+        {
+          "id": "C6e9GEd6Lka-TX_rVxrAQA",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/n7n8rCu3mE6goaSr96R9vw/VeHo-VH_RoomType1_3.JPG",
+          "name": "VeHo-VH_RoomType1_3.JPG",
+          "description": ""
+        },
+        {
+          "id": "2j3WgVR1XE6_I36N_kWTMg",
+          "imagePath": "/app/data/images/1UfIVmeEUU6GThmOeNj-FA/n7n8rCu3mE6goaSr96R9vw/VeHo-VH_RoomType1_4.JPG",
+          "name": "VeHo-VH_RoomType1_4.JPG",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

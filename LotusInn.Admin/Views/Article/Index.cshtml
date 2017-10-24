@@ -1,0 +1,62 @@
+﻿<script src="~/app/components/Article/articleAddEditCtrl.js"></script>
+
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    Article Editor
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="/">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#">Article</a>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div ng-controller="articleAddEditCtrl" ng-init="init()">
+            <div class="alert alert-dismissable" ng-class="{'alert-success': alert.type == 'success',
+                                                    'alert-info': alert.type == 'info',
+                                                    'alert-warning': alert.type == 'warning',
+                                                    'alert-danger': alert.type=='error' }"
+                 ng-repeat="alert in alerts">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="True"></button>
+                <strong>{{alert.title}}</strong>
+                {{alert.body}}
+            </div>
+
+            <form class="form form-horizontal" role="form" name="article">
+                <div class="form-body ">
+                    <div class="form-group">
+                        <label class="col-md-1 col-sm-12 col-xs-12 control-label">Select article</label>
+                        <div class="col-md-10 col-sm-12 col-xs-12">
+                            <select class="form-control" chosen ng-model="selectedArticle" disable-search="true" ng-options="a.value for a in articles" style="width: 300px"></select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="article-content" class="col-md-1 col-sm-12 col-xs-12 control-label">Content</label>
+                        <div class="col-md-10 col-sm-12 col-xs-12">
+                            <div id="article-content" class="form-control" ckeditor="options" ng-model="article.Content"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12">
+                            <button class="btn green" ng-click="save()"><i class="fa fa-check"></i> Save</button>
+                            <button class="btn default" ng-click="back()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- END PAGE CONTENT-->

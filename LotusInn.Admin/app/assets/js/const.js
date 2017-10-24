@@ -1,0 +1,1 @@
+﻿var LOTUS_INN_URL = 'http://localhost:5492';

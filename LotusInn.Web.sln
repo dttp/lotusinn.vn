@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotusInn.Web", "LotusInn.Web\LotusInn.Web.csproj", "{F5FAD75D-3120-464F-A6C5-3C6D4EFA119F}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Shared", "TP.Shared\TP.Shared.csproj", "{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotusInn.Admin", "LotusInn.Admin\LotusInn.Admin.csproj", "{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Lotusinn.db", "Lotusinn.db\Lotusinn.db.sqlproj", "{1B117ECC-74BD-47AC-9E72-94950CD02626}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +41,17 @@ Global
 		{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4254B17E-0632-405B-A81D-2220BD63BA69}
 	EndGlobalSection
 EndGlobal

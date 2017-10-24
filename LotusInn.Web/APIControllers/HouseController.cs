@@ -6,9 +6,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using LotusInn.Core;
 using LotusInn.Model;
 using Microsoft.Owin.Security.Notifications;
-using TP.Shared;
 
 namespace LotusInn.Web.APIControllers
 {

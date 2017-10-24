@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LotusInn.Core.Models;
 using LotusInn.Model;
-using TP.Shared.Models;
 
 namespace LotusInn.Business
 {

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
-using TP.Shared.Models;
+using LotusInn.Core.Models;
 
-namespace TP.Shared
+namespace LotusInn.Core
 {
     public class EmailService
     {

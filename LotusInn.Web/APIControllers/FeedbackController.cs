@@ -6,8 +6,8 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using LotusInn.Business;
+using LotusInn.Core;
 using LotusInn.Model;
-using TP.Shared;
 
 namespace LotusInn.Web.APIControllers
 {

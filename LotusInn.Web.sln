@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotusInn.Model", "LotusInn.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotusInn.Business", "LotusInn.Business\LotusInn.Business.csproj", "{AAAF02AC-6917-4A23-A73E-7DE0DC02FA24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Shared", "TP.Shared\TP.Shared.csproj", "{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotusInn.Admin", "LotusInn.Admin\LotusInn.Admin.csproj", "{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Lotusinn.db", "Lotusinn.db\Lotusinn.db.sqlproj", "{1B117ECC-74BD-47AC-9E72-94950CD02626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotusinn.Core", "LotusInn.Core\Lotusinn.Core.csproj", "{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{AAAF02AC-6917-4A23-A73E-7DE0DC02FA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAAF02AC-6917-4A23-A73E-7DE0DC02FA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAAF02AC-6917-4A23-A73E-7DE0DC02FA24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69E5ACA8-C205-4872-B9DF-C14EAC5F238D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +43,10 @@ Global
 		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1B117ECC-74BD-47AC-9E72-94950CD02626}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

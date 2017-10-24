@@ -7,8 +7,8 @@
     <ProjectGuid>{5DDC4A51-A35F-4D65-9983-0CBEF80152E4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TP.Shared</RootNamespace>
-    <AssemblyName>TP.Shared</AssemblyName>
+    <RootNamespace>LotusInn.Core</RootNamespace>
+    <AssemblyName>Lotusinn.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

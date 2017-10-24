@@ -46,13 +46,13 @@
     <Compile Include="WebBookingHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LotusInn.Core\Lotusinn.Core.csproj">
+      <Project>{5ddc4a51-a35f-4d65-9983-0cbef80152e4}</Project>
+      <Name>Lotusinn.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LotusInn.Model\LotusInn.Model.csproj">
       <Project>{c453677d-7940-47d2-95b3-68c6f3d44da0}</Project>
       <Name>LotusInn.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TP.Shared\TP.Shared.csproj">
-      <Project>{5ddc4a51-a35f-4d65-9983-0cbef80152e4}</Project>
-      <Name>TP.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

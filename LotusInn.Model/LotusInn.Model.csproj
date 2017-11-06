@@ -46,8 +46,10 @@
     <Compile Include="Article.cs" />
     <Compile Include="FeedbackForm.cs" />
     <Compile Include="House.cs" />
-    <Compile Include="Portfolio.cs" />
+    <Compile Include="ImageItem.cs" />
+    <Compile Include="PhotoAlbum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryItem.cs" />
     <Compile Include="RoomType.cs" />
     <Compile Include="ServiceInfo.cs" />
     <Compile Include="SocialService.cs" />

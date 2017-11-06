@@ -135,16 +135,16 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr role="row" class="heading">
-                                <th width="8%">
+                                <th width="180">
                                     Image
                                 </th>
-                                <th width="25%">
+                                <th width="300">
                                     Name
                                 </th>
-                                <th width="57%">
+                                <th>
                                     Description
                                 </th>
-                                <th width="10%">
+                                <th width="180">
                                 </th>
                             </tr>
                         </thead>
@@ -154,18 +154,19 @@
                             </tr>
                             <tr ng-repeat="item in roomType.Images">
                                 <td>
-                                    <a href="{{getLink(item)}}" class="fancybox" fancybox title="{{item.description}}">
-                                        <img class="img-responsive" ng-src="{{getLink(item)}}" alt="">
+                                    <a href="{{item.ImagePath}}" class="fancybox" fancybox title="{{item.Description}}">
+                                        <img class="img-responsive" ng-src="{{item.ImagePath}}" alt="">
                                     </a>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control" ng-model="item.name" ng-blur="save()">
+                                    <input type="text" class="form-control" ng-model="item.Name">
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control" ng-model="item.description" ng-blur="save()">
+                                    <input type="text" class="form-control" ng-model="item.Description">
                                 </td>
                                 <td>
-                                    <a ng-click="showConfirm(item)" class="btn red btn-sm">
+                                    <button type="button" class="btn blue btn-sm" ng-click="updateImage(item)">Save</button>
+                                    <a ng-click="deleteImage(item)" class="btn red btn-sm">
                                         <i class="fa fa-times"></i> Remove
                                     </a>
                                 </td>

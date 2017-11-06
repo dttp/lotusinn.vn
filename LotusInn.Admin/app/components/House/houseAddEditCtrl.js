@@ -1,5 +1,5 @@
 ﻿
-lotusInnAdmin.controller('houseAddEditCtrl', function ($scope, $http, $modal, $alert) {
+lotusInnAdmin.controller('houseAddEditCtrl', function ($scope, $http, $modal, $alert, $house, $roomType) {
     $scope.house = {};
     $scope.roomTypes = [];
     $scope.alerts = [];
@@ -28,72 +28,34 @@ lotusInnAdmin.controller('houseAddEditCtrl', function ($scope, $http, $modal, $a
         }
     });
 
-    $scope.save = function() {
-        var url = LOTUS_INN_URL + '/api/house/saveHouse';
-        var request = {
-            url: url,
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
-            },
-            data: $scope.house
-        };
-        $http(request).success(function() {
+    $scope.save = function () {
+        $house.update($scope.house).then(function() {
             $alert.success($scope.alerts, 'House info saved.');
-        }).error(function(err) {
-            $alert.error($scope.alerts, 'Something went wrong. ' + err.Message);
+        }, function(err) {
+            $alert.error($scope.alerts, 'Something went wrong. ' + err.data.Message);
         });
     }
 
     $scope.createRoomType = function() {
-        var request = {
-            url: LOTUS_INN_URL + '/api/house/CreateRoomType?houseId=' + $scope.house.Id,
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
-            }
-        };
-
-        $http(request).success(function(data) {
-            $scope.roomTypes.push(data);
-        });
+        $roomType.create($scope.house.Id).then(function(response) {
+            $scope.roomTypes.push(response.data);
+        });        
     }
 
-    $scope.edit = function(room) {
-        window.location.href = '/house/roomType?hid=' + room.HouseId + '&rid=' + room.Id;
+    $scope.editRoomType = function(room) {
+        window.location.href = '/house/roomType?id=' + room.Id;
     }
 
-    $scope.delete = function(room) {
-        var request = {
-            url: LOTUS_INN_URL + '/api/house/DeleteRoomType?houseId=' + room.HouseId + '&roomTypeId=' + room.Id,
-            method: 'DELETE',
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
-            }
-        };
-
-        $http(request).success(function() {
-            for (var i = 0; i < $scope.roomTypes.length; i++) {
-                if ($scope.roomTypes[i].Id === room.Id) {
-                    $scope.roomTypes.splice(i, 1);
-                    break;
-                }
-            }
-        });
-    }
-
-    $scope.confirmDelete = function(room) {
+    $scope.deleteRoomType = function (room) {
         var modalInstance = $modal.open({
             animation: true,
             templateUrl: 'confirmDeleteModal.html',
             controller: 'ModalInstanceCtrl'
         });
         modalInstance.result.then(function () {
-            $scope.delete(room);
-        }, function () {
+            $roomType.delete(room.Id).then(function () {
+                _.remove($scope.roomTypes, { Id: room.Id });
+            });
         });
     }
 
@@ -101,27 +63,16 @@ lotusInnAdmin.controller('houseAddEditCtrl', function ($scope, $http, $modal, $a
         // ---- get house
         var hid = getParameterByName('hid');
         if (hid) {
-            var url = LOTUS_INN_URL + '/api/house/GetHouse?houseId=' + hid;
-            $http.get(url).success(function (data) {
-                $scope.house = data;
+            $house.getById(hid).then(function(response) {
+                $scope.house = response.data
                 $scope.mapInfo.center = $scope.house.Latitude + ", " + $scope.house.Longitude;
                 $scope.mapInfo.markers.push({
                     position: $scope.house.Latitude + ", " + $scope.house.Longitude
                 });
             });
 
-            var request = {
-                url: LOTUS_INN_URL + '/api/house/GetRoomTypes?houseId=' + hid,
-                method: 'GET',
-                headers: {
-                    'Content-type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-
-            $http(request).success(function (data) {
-                if (data)
-                    $scope.roomTypes = data.RoomTypes;
+            $roomType.getByHouseId(hid).then(function(response) {
+                $scope.roomTypes = response.data;
             });
         }        
     }

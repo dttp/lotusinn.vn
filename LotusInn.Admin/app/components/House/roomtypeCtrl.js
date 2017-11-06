@@ -1,32 +1,15 @@
 ﻿angular.module('roomTypeModule')
-.controller('roomTypeCtrl', function ($scope, $http, $alert, $modal, FileUploader) {
+.controller('roomTypeCtrl', function ($scope, $http, $alert, $modal, FileUploader, $roomType) {
     $scope.alerts = [];
     $scope.roomType = {};
     $scope.newFeature = { name: '' };
 
-    var uploader = $scope.uploader = new FileUploader({
-        url: LOTUS_INN_URL + "/api/house/uploadImages",
+    var uploader = $scope.uploader = new FileUploader({        
         removeAfterUpload: true
     });
 
     uploader.onCompleteItem = function (item, response, status, headers) {
         $scope.init();
-    }
-
-    $scope.getLink = function (item) {
-        var url = LOTUS_INN_URL + item.imagePath;
-        return url;
-    }
-
-    $scope.remove = function (item) {
-        for (var i = 0; i < $scope.currentAlbum.items.length; i++) {
-            var portfolioItem = $scope.currentAlbum.items[i];
-            if (item.id === portfolioItem.id) {
-                $scope.currentAlbum.items.splice(i, 1);
-                $scope.saveChanges();
-                break;
-            }
-        }
     }
 
     $scope.selectFile = function () {
@@ -58,80 +41,48 @@
         $scope.newFeature.name = '';
     }
 
-    $scope.deleteFeature = function(feature) {
-        for (var i = 0; i < $scope.roomType.Features.length; i++) {
-            if ($scope.roomType.Features[i] === feature) {
-                $scope.roomType.Features.splice(i, 1);
-                break;
-            }
-        }
+    $scope.deleteFeature = function (feature) {
+        _.remove($scope.roomType.Features,
+            function(item) {
+                return item === feature;
+            });
     }
 
-    $scope.removeImage = function(item) {
-        for (var i = 0; i < $scope.roomType.Images.length; i ++) {
-            if ($scope.roomType.Images[i].id === item.id) {
-                $scope.roomType.Images.splice(i, 1);
-                $scope.save();
-                break;
-            }
-        }
-    }
-
-    $scope.showConfirm = function (item) {
+    $scope.deleteImage = function (item) {
         var modalInstance = $modal.open({
             animation: true,
             templateUrl: 'confirmDeleteModal.html',
             controller: 'ModalInstanceCtrl'
         });
         modalInstance.result.then(function () {
-            $scope.removeImage(item);
-        }, function () {
+            $roomType.deleteImage($scope.roomType.Id, item.Id);
         });
     }
 
-    $scope.save = function() {
-        var hid = getParameterByName('hid');
-        var request = {
-            url: LOTUS_INN_URL + '/api/house/saveRoomType?houseId=' + hid ,
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
-            },
-            data: $scope.roomType
-        };
-
-        $http(request).success(function() {
+    $scope.updateImage = function(item) {
+        $roomType.updateImage($scope.roomType.Id, item).then(function() {
             $alert.success($scope.alerts, 'Saved successfully');
-        }).error(function(err) {
-            $alert.error($scope.alerts, err.Message);
         });
     }
 
-    $scope.back = function() {
-        var hid = getParameterByName('hid');
-        window.location.href = '/house/edit?hid=' + hid;
+    $scope.save = function () {
+        $roomType.update($scope.roomType).then(function() {
+            $alert.success($scope.alerts, 'Saved successfully');
+        }, function(err) {
+            $alert.error($scope.alerts, err.Message);
+        });        
     }
 
-    $scope.init = function () {
-        var hid = getParameterByName('hid');
-        var rid = getParameterByName('rid');
-        var request = {
-            url: LOTUS_INN_URL + '/api/house/getRoomType?houseId='+hid + '&roomTypeId=' + rid,
-            method: 'GET',
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
-            }            
-        };
+    $scope.back = function() {        
+        window.location.href = '/house/edit?hid=' + $scope.roomType.HouseId;
+    }
 
-        $http(request).success(function(data) {
-            $scope.roomType = data;
-        }).error(function(err) {
-            $alert.error($scope.alerts, err.Message);
+    $scope.init = function () {        
+        var id = getParameterByName('id');
+        $roomType.getById(id).then(function(response) {
+            $scope.roomType = response.data;            
         });
-
-        uploader.url = LOTUS_INN_URL + "/api/house/uploadImages?houseId=" + hid + "&roomTypeId=" + rid;
+        uploader.url = LOTUS_INN_URL + '/api/roomtype/uploadimages?roomTypeId=' + id;
     }
 })
 .controller('ModalInstanceCtrl', function ($scope, $modalInstance) {

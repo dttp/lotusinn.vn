@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -841,6 +842,9 @@
     <Content Include="app\components\Service\socialServices.js" />
     <Content Include="app\directives\ngEnter.js" />
     <Content Include="app\services\alertService.js" />
+    <Content Include="app\services\houseSvc.js" />
+    <Content Include="app\services\roomTypeSvc.js" />
+    <Content Include="app\services\xhttpService.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />

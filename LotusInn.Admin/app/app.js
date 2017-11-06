@@ -33,4 +33,5 @@ lotusInnAdmin.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.defaults.headers.post = {};
     $httpProvider.defaults.headers.put = {};
     $httpProvider.defaults.headers.patch = {};
+    $httpProvider.defaults.headers.common['Content-Type'] = 'application/json';
 }]);

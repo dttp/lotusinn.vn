@@ -7,14 +7,14 @@
     <Name>Lotusinn.db</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{1b117ecc-74bd-47ac-9e72-94950cd02626}</ProjectGuid>
+    <ProjectGuid>{76db054b-4d17-465a-96a4-78f1ac78686a}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
     <RootNamespace>Lotusinn.db</RootNamespace>
     <AssemblyName>Lotusinn.db</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -23,6 +23,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -57,19 +59,54 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Article.sql" />
-    <Build Include="House.sql" />
-    <Build Include="RoomType.sql" />
-    <Build Include="Image.sql" />
-    <Build Include="PhotoAlbum.sql" />
-    <Build Include="AlbumImage.sql" />
-    <Build Include="RoomTypeImage.sql" />
-    <Build Include="FacilityItem.sql" />
-    <Build Include="Feedback.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="Lotusinn.db.refactorlog" />
+    <Build Include="dbo\Tables\Article.sql" />
+    <Build Include="dbo\Tables\AlbumImage.sql" />
+    <Build Include="dbo\Tables\FacilityItem.sql" />
+    <Build Include="dbo\Tables\Feedback.sql" />
+    <Build Include="dbo\Tables\House.sql" />
+    <Build Include="dbo\Tables\Image.sql" />
+    <Build Include="dbo\Tables\PhotoAlbum.sql" />
+    <Build Include="dbo\Tables\RoomType.sql" />
+    <Build Include="dbo\Tables\RoomTypeImage.sql" />
+    <Build Include="dbo\Stored Procedures\HouseInsert.sql" />
+    <Build Include="dbo\Stored Procedures\HouseGetById.sql" />
+    <Build Include="dbo\Stored Procedures\HouseDelete.sql" />
+    <Build Include="dbo\Stored Procedures\HouseSelect.sql" />
+    <Build Include="dbo\Stored Procedures\ArticleInsert.sql" />
+    <Build Include="dbo\Stored Procedures\ArticleGetById.sql" />
+    <Build Include="dbo\Stored Procedures\ArticleUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\HouseUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\ArticleDelete.sql" />
+    <Build Include="dbo\Stored Procedures\ArticleGetByName.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeInsert.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeDelete.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeGetByHouseId.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeGetById.sql" />
+    <Build Include="dbo\Stored Procedures\ImageInsert.sql" />
+    <Build Include="dbo\Stored Procedures\ImageUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\ImageDelete.sql" />
+    <Build Include="dbo\Stored Procedures\ImageGetByRoomTypeId.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeImageInsert.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeImageDeleteByImageId.sql" />
+    <Build Include="dbo\Stored Procedures\FacilityItemInsert.sql" />
+    <Build Include="dbo\Stored Procedures\FacilityItemUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\FacilityItemDelete.sql" />
+    <Build Include="dbo\Stored Procedures\FacilityItemGetAll.sql" />
+    <Build Include="dbo\Stored Procedures\PhotoAlbumInsert.sql" />
+    <Build Include="dbo\Stored Procedures\PhotoAlbumUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\PhotoAlbumDelete.sql" />
+    <Build Include="dbo\Stored Procedures\PhotoAlbumGetById.sql" />
+    <Build Include="dbo\Stored Procedures\PhotoAlbumGetByHouseId.sql" />
+    <Build Include="dbo\Stored Procedures\AlbumImageInsert.sql" />
+    <Build Include="dbo\Stored Procedures\AlbumImageDeleteByImageId.sql" />
+    <Build Include="dbo\Stored Procedures\AlbumImageDeleteByAlnumId.sql" />
+    <Build Include="dbo\Stored Procedures\ImageGetByAlbumId.sql" />
+    <Build Include="dbo\Stored Procedures\RoomTypeDeleteByHouseId.sql" />
   </ItemGroup>
 </Project>

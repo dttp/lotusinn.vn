@@ -99,7 +99,8 @@
                                   if (isEmpty(newVal)) {
                                       return disableWithMessage();
                                   }
-                                  scope.onChange(newVal);
+                                  if (scope.onChange)
+                                    scope.onChange(newVal);
                               }
                           });
                       });

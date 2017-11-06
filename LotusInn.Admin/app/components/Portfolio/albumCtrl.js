@@ -1,9 +1,9 @@
 ﻿// ReSharper disable once InconsistentNaming
 angular.module('portfolioModule')
-.controller("albumCtrl", function ($scope, $http, $modal, FileUploader, $alert) {
-        $scope.alerts = [];
+.controller("albumCtrl", function ($scope, $http, $modal, FileUploader, $alert, $album, $house) {
+    $scope.alerts = [];
     var uploader = $scope.uploader = new FileUploader({
-        url: LOTUS_INN_URL + "/api/portfolio/uploadImages",
+        url: LOTUS_INN_URL + "/api/album/uploadImages",
         removeAfterUpload: true
     });
 
@@ -11,39 +11,21 @@ angular.module('portfolioModule')
         $scope.refresh();
     }
 
-    function searchToObject() {
-        var pairs = window.location.search.substring(1).split("&"),
-          obj = {},
-          pair,
-          i;
-
-        for (i in pairs) {
-            if (pairs[i] === "") continue;
-
-            pair = pairs[i].split("=");
-            obj[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
-        }
-
-        return obj;
-    }
-
     $scope.portfolio = {};
     $scope.currentAlbum = {};
 
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
     $scope.refresh = function () {
-        var url = LOTUS_INN_URL + "/api/portfolio/getportfolio";
-        $http.get(url).success(function (data) {
-            $scope.portfolio = data;
-            var search = searchToObject();
-            var albumId = search.id;
-            for (var i = 0; i < $scope.portfolio.albums.length; i ++) {
-                var album = $scope.portfolio.albums[i];
-                if (album.id === albumId) {
-                    $scope.currentAlbum = album;
-                    uploader.url = LOTUS_INN_URL + "/api/portfolio/uploadImages?albumId=" + $scope.currentAlbum.id;
-                    break;
-                }
-            }
+        var id = getParameterByName("id");
+        uploader.url = LOTUS_INN_URL + "/api/album/uploadImages?albumId=" + id;
+        $album.getById(id).then(function(response) {
+            $scope.currentAlbum = response.data;
         });
     }
 
@@ -67,14 +49,9 @@ angular.module('portfolioModule')
     }
 
     $scope.remove = function(item) {
-        for (var i = 0; i < $scope.currentAlbum.items.length; i ++) {
-            var portfolioItem = $scope.currentAlbum.items[i];
-            if (item.id === portfolioItem.id) {
-                $scope.currentAlbum.items.splice(i, 1);
-                $scope.saveChanges();
-                break;
-            }
-        }
+        $album.deleteImage($scope.currentAlbum.Id, item.Id).then(function() {
+            _.remove($scope.currentAlbum.Items, { Id: item.Id });
+        });
     }
 
     $scope.selectFile = function() {

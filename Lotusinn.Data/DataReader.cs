@@ -92,5 +92,24 @@ namespace Lotusinn.Data
             }
             return list;
         }
+
+        public static List<PhotoAlbum> ReadAlbum(IDataReader reader)
+        {
+            var list = new List<PhotoAlbum>();
+            while (reader.Read())
+            {
+                var album = new PhotoAlbum
+                {
+                    Id = reader["Id"].ToString(),
+                    HouseId = reader["HouseId"].ToString(),
+                    Description = reader["Description"].ToString(),
+                    Name = reader["Name"].ToString(),
+                    ThumbnailImage = reader["Thumbnail"].ToString(),
+                    Items = new List<ImageItem>()
+                };
+                list.Add(album);
+            }
+            return list;
+        }
     }
 }

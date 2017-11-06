@@ -1,9 +1,9 @@
 ﻿// ReSharper disable once InconsistentNaming
 angular.module('portfolioModule')
-    .controller("portfolioCtrl", function($scope, $http, $timeout, $modal, FileUploader, $alert) {
+    .controller("portfolioCtrl", function($scope, $http, $timeout, $modal, FileUploader, $alert, $house, $album) {
         $scope.alerts = [];
-
         $scope.houses = [];
+        $scope.selectedHouse = {};
 
         var uploader = $scope.uploader = new FileUploader({
             removeAfterUpload: true,
@@ -20,83 +20,57 @@ angular.module('portfolioModule')
             console.log(response);
         }
 
-        $scope.portfolio = {};
+        $scope.albums = {};
 
         $scope.refresh = function() {
-            var url = LOTUS_INN_URL + "/api/portfolio/getportfolio";
-            $http.get(url).success(function(data) {
-                for (var i = 0; i < data.albums.length; i ++) {
-                    data.albums[i].thumbnail = data.albums[i].thumbnail + "?rnd=" + (new Date()).getTime();
-                }
-                $scope.portfolio = data;
+            $album.getByHouseId($scope.selectedHouse.Id).then(function(response) {
+                $scope.albums = response.data;
             });
         }
 
-        $scope.init = function() {
-            $scope.refresh();
-            $http.get(LOTUS_INN_URL + "/api/house/gethouses")
-                .success(function(data) {
-                    $scope.houses = data.Houses;
-                });
+        $scope.init = function () {
+            $house.getHouses().then(function(response) {
+                $scope.houses = response.data;
+                if ($scope.houses.length > 0) {
+                    $scope.selectedHouse = $scope.houses[0];
+                    $scope.refresh();
+                }
+            });
         }
 
-        
-
-        $scope.saveChanges = function() {
-            var request = {
-                method: 'POST',
-                url: LOTUS_INN_URL + "/api/portfolio/saveportfolio",
-                headers: {
-                    'Content-type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                data: $scope.portfolio
-            }
-            $http(request).success(function () {
+        $scope.saveChanges = function(album) {
+            $album.update(album).then(function(){
                 $alert.success($scope.alerts,"Changes has been saved.");
             });
         }
 
-        $scope.getLink = function(album) {
-            var url = LOTUS_INN_URL + album.thumbnail;
-            return url;
-        }
-
         $scope.remove = function(album) {
-            for (var i = 0; i < $scope.portfolio.albums.length; i ++) {
-                var portfolioAlbum = $scope.portfolio.albums[i];
-                if (album.id === portfolioAlbum.id) {
-                    $scope.portfolio.albums.splice(i, 1);
-                    $scope.saveChanges();
-                    break;
-                }
-            }
-        }
-
-        $scope.createAlbum = function() {
-            var request = {
-                method: 'POST',
-                url: LOTUS_INN_URL + "/api/portfolio/createAlbum",
-                headers: {
-                    'Content-type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-
-            $http(request).success(function(newAlbum) {
-                $scope.portfolio.albums.push(newAlbum);
-            }).error(function(err) {
-                $alert.error($scope.alerts, err.ExceptionMessage);
+            $album.delete(album.Id).then(function() {
+                _.remove($scope.albums, { Id: album.Id });
             });
         }
 
+        $scope.createAlbum = function() {
+            var album = {
+                Name: 'New Album',
+                Description: '',
+                HouseId: $scope.selectedHouse.Id
+            }
+
+            $album.create($scope.selectedHouse.Id, album).then(function (response) {
+                $scope.albums.push(response.data);
+            }, function (err) {
+                $alert.error($scope.alerts, err.ExceptionMessage);
+            });                
+        }
+
         $scope.showAlbum = function(album) {
-            window.location.href = "/portfolio/album?id=" + album.id;
+            window.location.href = "/portfolio/album?id=" + album.Id;
         }
 
 
         $scope.setThumbnail = function(album) {
-            uploader.url = LOTUS_INN_URL + "/api/portfolio/setThumbnail?albumId=" + album.id;
+            uploader.url = LOTUS_INN_URL + "/api/album/setThumbnail?albumId=" + album.Id;
             setTimeout(function() {
                 $("#select-file").click();
             }, 100);

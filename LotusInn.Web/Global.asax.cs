@@ -19,7 +19,7 @@ namespace LotusInn.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Repository.Create(Server.MapPath("~/Repository"));
+            Repository.Create(Server.MapPath("~"));
         }
     }
 }

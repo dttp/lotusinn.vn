@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAdapter\AlbumAdapter.cs" />
     <Compile Include="DataAdapter\ArticleAdapter.cs" />
     <Compile Include="DataAdapter\ImageAdapter.cs" />
     <Compile Include="DataAdapter\RoomTypeAdapter.cs" />

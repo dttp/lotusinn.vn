@@ -7,9 +7,9 @@ namespace Lotusinn.Service
 {
     public class Repository
     {
-        private const string ROOMTYPE_IMAGE = @"Houses\{HouseId}\RoomTypes\{RoomTypeId}\Images\{ImageId}\{Name}";
-        private const string ALBUM_IMAGE = @"Albums\{AlbumId}\Images\{ImageId}\{Name}";
-        private const string ALBUM_THUMBNAIL = @"Albums\{AlbumId}\thumb.jpg";
+        private const string ROOMTYPE_IMAGE = @"Repository\Houses\{HouseId}\RoomTypes\{RoomTypeId}\Images\{ImageId}.{ext}";
+        private const string ALBUM_IMAGE = @"Repository\Albums\{AlbumId}\Images\{ImageId}.{ext}";
+        private const string ALBUM_THUMBNAIL = @"Repository\Albums\{AlbumId}\thumb.jpg";
         public string RootFolder { get; set; }
 
         public Repository(string rootFolder)
@@ -46,12 +46,12 @@ namespace Lotusinn.Service
                     result = ROOMTYPE_IMAGE.Replace("{HouseId}", item.Props["HouseId"])
                                            .Replace("{RoomTypeId}", item.Props["RoomTypeId"])
                                            .Replace("{ImageId}", item.Props["ImageId"])
-                                           .Replace("{Name}", item.Props["Name"]);
+                                           .Replace("{ext}", item.Props["ext"]);
                     break;
                 case RepositoryItemType.AlbumImage:
                     result = ALBUM_IMAGE.Replace("{AlbumId}", item.Props["AlbumId"])
                                         .Replace("{ImageId}", item.Props["ImageId"])
-                                        .Replace("{Name}", item.Props["Name"]);
+                                        .Replace("{ext}", item.Props["ext"]);
                     break;
                 case RepositoryItemType.AlbumThumbnail:
                     result = ALBUM_THUMBNAIL.Replace("{AlbumId}", item.Props["AlbumId"]);

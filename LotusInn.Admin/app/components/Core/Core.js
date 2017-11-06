@@ -4,8 +4,7 @@
         items: [
             { href: '/', icon: 'icon-home', title: 'Dashboard', selected: false },
             { href: '/house', icon: 'icon-home', title: 'Houses', selected: false },
-            { href: '/article/', icon: 'icon-doc', title: 'Articles', selected: false },
-            { href: '/service/', icon: 'icon-wrench', title: 'Services', selected: false },
+            { href: '/article/', icon: 'icon-doc', title: 'Articles', selected: false },            
             { href: '/service/social/', icon: 'icon-wrench', title: 'Social Services', selected: false },
             { href: '/portfolio', icon: 'icon-picture', title: 'Photo Gallery', selected: false }
         ]

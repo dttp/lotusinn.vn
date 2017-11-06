@@ -190,7 +190,7 @@
     <Compile Include="APIControllers\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="APIControllers\HouseController.cs" />
-    <Compile Include="APIControllers\PortfolioController.cs" />
+    <Compile Include="APIControllers\AlbumController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -838,11 +838,12 @@
     <Content Include="app\components\Login\login.js" />
     <Content Include="app\components\Portfolio\albumCtrl.js" />
     <Content Include="app\components\Portfolio\portfolioCtrl.js" />
-    <Content Include="app\components\Service\serviceCtrl.js" />
     <Content Include="app\components\Service\socialServices.js" />
     <Content Include="app\directives\ngEnter.js" />
     <Content Include="app\services\alertService.js" />
+    <Content Include="app\services\articleSvc.js" />
     <Content Include="app\services\houseSvc.js" />
+    <Content Include="app\services\albumSvc.js" />
     <Content Include="app\services\roomTypeSvc.js" />
     <Content Include="app\services\xhttpService.js" />
     <Content Include="favicon.ico" />
@@ -933,7 +934,6 @@
     <Content Include="Views\House\RoomType.cshtml" />
     <Content Include="Views\Portfolio\Album.cshtml" />
     <Content Include="Views\Portfolio\Index.cshtml" />
-    <Content Include="Views\Service\Index.cshtml" />
     <None Include="Properties\PublishProfiles\LotusInn.pubxml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Service\Social.cshtml" />

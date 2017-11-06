@@ -18,7 +18,7 @@
 </div>
 <!-- END PAGE HEADER-->
 <!-- BEGIN PAGE CONTENT-->
-<div class="row" ng-controller="portfolioCtrl" ng-init="init()">
+<div ng-controller="portfolioCtrl" ng-init="init()">
     <div class="alert alert-dismissable" ng-class="{'alert-success': alert.type == 'success',
                                                     'alert-info': alert.type == 'info',
                                                     'alert-warning': alert.type == 'warning',
@@ -40,70 +40,75 @@
             <button class="btn default" type="button" ng-click="cancel()">No</button>
         </div>
     </script>
-
-    <input id="select-file" style="position: fixed; left: -100px; top: -100px; width: 0; height: 0;" type="file" nv-file-select uploader="uploader"/>
-    <div class="col-md-12">
-        <div id="tab_images_uploader_container" class=" margin-bottom-10">
-            <a ng-click="createAlbum()" class="btn green">
-                <i class="fa fa-plus"></i> New Album
-            </a>
+    <div class="row">
+        <div class="col-md-12 form form-horizontal">
+            <div class="form-group">
+                <label class="control-label" style="float: left; margin-left: 30px">Selected House</label>
+                <div class="col-md-4">
+                    <select class="form-control input-medium" ng-model="selectedHouse" ng-options="house as house.Name for house in houses track by house.Id"></select>
+                </div>
+            </div>
         </div>
-        <table class="table table-bordered table-hover table-responsive">
-            <thead>
-            <tr role="row" class="heading">
-                <th width="8%">
-                    Thumbnail
-                </th>
-                <th width="20%">
-                    Album Name
-                </th>
-                <th width="40%">
-                    Description
-                </th>
-                <th width="17%">
-                    House
-                </th>
-                <th width="15%">
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-if="portfolio.albums.length == 0">
-                <td colspan="4" style="text-align: center">No Albums. </td>
-            </tr>
-            <tr ng-repeat="album in portfolio.albums">
-                <td>
-                    <div class="album-thumb">
-                        <span ng-if="!album.thumbnail">No Image</span>
-                        <img ng-if="album.thumbnail.length > 0" class="img-responsive" ng-src="{{getLink(album)}}" alt="">
-                        <a href="" class="btn default" ng-click="setThumbnail(album)">
-                            <i class="fa fa-picture-o"></i>
+    </div>
+    <div class="row">
+        <input id="select-file" style="position: fixed; left: -100px; top: -100px; width: 0; height: 0;" type="file" nv-file-select uploader="uploader"/>
+        <div class="col-md-12">
+            <div id="tab_images_uploader_container" class=" margin-bottom-10">
+                <button ng-click="createAlbum()" class="btn green" ng-disabled="selectedHouse == undefined || selectedHouse == null">
+                    <i class="fa fa-plus"></i> New Album
+                </button>
+            </div>
+            <table class="table table-bordered table-hover table-responsive">
+                <thead>
+                <tr role="row" class="heading">
+                    <th width="180">
+                        Thumbnail
+                    </th>
+                    <th width="300">
+                        Album Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th width="300">
+                        Actions
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-if="albums.length == 0">
+                    <td colspan="4" style="text-align: center">No Albums. </td>
+                </tr>
+                <tr ng-repeat="album in albums">
+                    <td>
+                        <div class="album-thumb">
+                            <span ng-if="!album.ThumbnailImage">No Image</span>
+                            <img ng-if="album.ThumbnailImage.length > 0" class="img-responsive" ng-src="{{album.ThumbnailImage}}" alt="">
+                            <a href="" class="btn default" ng-click="setThumbnail(album)">
+                                <i class="fa fa-picture-o"></i>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" ng-model="album.Name">
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" ng-model="album.Description">
+                    </td>
+                    <td>
+                        <a ng-click="saveChanges(album)" class="btn green btn-sm">
+                            <i class="fa fa-save"></i> Save
                         </a>
-                    </div>
-                </td>
-                <td>
-                    <input type="text" class="form-control" ng-model="album.name">
-                </td>
-                <td>
-                    <input type="text" class="form-control" ng-model="album.description">
-                </td>
-                <td>
-                    <select chosen disable-search="true" ng-model="album.houseId" ng-options ="house.Id as house.Name for house in houses" width="80"></select>
-                </td>
-                <td>
-                    <a ng-click="saveChanges()" class="btn green btn-sm">
-                        <i class="fa fa-save"></i> Save
-                    </a>
-                    <a ng-click="showAlbum(album)" class="btn blue btn-sm">
-                        <i class="fa fa-edit"></i> Edit
-                    </a>
-                    <a ng-click="showConfirm(album)" class="btn red btn-sm">
-                        <i class="fa fa-times"></i> Delete</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-
+                        <a ng-click="showAlbum(album)" class="btn blue btn-sm">
+                            <i class="fa fa-edit"></i> Edit
+                        </a>
+                        <a ng-click="showConfirm(album)" class="btn red btn-sm">
+                            <i class="fa fa-times"></i> Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 <!-- END PAGE CONTENT-->

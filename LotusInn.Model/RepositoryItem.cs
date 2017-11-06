@@ -25,7 +25,7 @@ namespace LotusInn.Model
                 {"HouseId", roomType.HouseId},
                 {"RoomTypeId", roomType.Id},
                 {"ImageId", image.Id},
-                {"Name", image.Name}
+                {"ext", image.Name.Substring(image.Name.LastIndexOf(".") + 1)}
             };
         }
 
@@ -36,7 +36,7 @@ namespace LotusInn.Model
             {
                 {"AlbumId", album.Id},
                 {"ImageId", image.Id},
-                {"Name", image.Name}
+                {"ext", image.Name.Substring(image.Name.LastIndexOf(".") + 1)}
             };
         }
 

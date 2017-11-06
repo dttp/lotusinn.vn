@@ -105,7 +105,6 @@
     <Build Include="dbo\Stored Procedures\PhotoAlbumGetByHouseId.sql" />
     <Build Include="dbo\Stored Procedures\AlbumImageInsert.sql" />
     <Build Include="dbo\Stored Procedures\AlbumImageDeleteByImageId.sql" />
-    <Build Include="dbo\Stored Procedures\AlbumImageDeleteByAlnumId.sql" />
     <Build Include="dbo\Stored Procedures\ImageGetByAlbumId.sql" />
     <Build Include="dbo\Stored Procedures\RoomTypeDeleteByHouseId.sql" />
   </ItemGroup>

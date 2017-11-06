@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumService.cs" />
     <Compile Include="ArticleService.cs" />
     <Compile Include="HouseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,4 @@
-﻿lotusInnAdmin.controller('articleAddEditCtrl', function ($scope, $http, $alert) {
+﻿lotusInnAdmin.controller('articleAddEditCtrl', function ($scope, $http, $alert, $article) {
     $scope.article = {};
     $scope.alerts = [];
     $scope.options = {
@@ -9,7 +9,8 @@
 
     $scope.articles = [
         { 'name': 'about', 'value': 'About Us' },        
-        { 'name': 'contact', 'value': 'Contact Us' }
+        { 'name': 'contact', 'value': 'Contact Us' },
+        { 'name': 'services', 'value': 'Services' }
     ];
 
     $scope.selectedArticle = $scope.articles[0];
@@ -19,17 +20,19 @@
     }, true);
 
     $scope.getPage = function(name) {
-        var url = LOTUS_INN_URL + '/api/article/getarticle?page=' + name;
-        var request = {
-            method: 'GET',
-            url: url,
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
+        $article.getByName(name).then(function(response) {
+            $scope.article = response.data;
+            if (!$scope.article) {
+                var newArticle = {
+                    Name: name,
+                    Description: '',
+                    Title: _.find($scope.articles, { name: name }).value,
+                    Content: ''
+                };
+                $article.create(newArticle).then(function(response) {
+                    $scope.article = response.data;
+                });
             }
-        };
-        $http(request).success(function (data) {
-            $scope.article = data;
         });
     }
 
@@ -38,17 +41,8 @@
     };
 
     $scope.save = function() {
-        var url = LOTUS_INN_URL + '/api/article/SaveArticle?page=' + $scope.selectedArticle.name;
-        var request = {
-            method: 'POST',
-            url: url,
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json'
-            },
-            data: $scope.article
-        };
-        $http(request).success(function() {
+        
+        $article.update($scope.article).success(function() {
             $alert.success($scope.alerts, 'Article saved.');
         }).error(function(err) {
             $alert.error($scope.alerts, err.Message);
